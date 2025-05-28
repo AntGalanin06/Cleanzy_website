@@ -14,23 +14,23 @@
           </p>
           <div class="footer__contacts">
             <a href="tel:+79990858555" class="footer__contact">
-              <i :class="ICONS.PHONE"></i>
+              <font-awesome-icon :icon="faPhone" />
               +7 (999) 085-85-55
             </a>
             <a href="mailto:info@cleanzy.ru" class="footer__contact">
-              <i :class="ICONS.ENVELOPE"></i>
+              <font-awesome-icon :icon="faEnvelope" />
               info@cleanzy.ru
             </a>
           </div>
           <div class="footer__social">
             <a href="https://vk.com/cleanzy_ru" class="footer__social-link" target="_blank" rel="noopener">
-              <i :class="ICONS.VK"></i>
+              <font-awesome-icon :icon="faVk" />
             </a>
             <a href="https://t.me/+79990858555" class="footer__social-link" target="_blank" rel="noopener">
-              <i :class="ICONS.TELEGRAM"></i>
+              <font-awesome-icon :icon="faTelegram" />
             </a>
             <a href="https://wa.me/79990858555" class="footer__social-link" target="_blank" rel="noopener">
-              <i :class="ICONS.WHATSAPP"></i>
+              <font-awesome-icon :icon="faWhatsapp" />
             </a>
           </div>
         </div>
@@ -77,7 +77,7 @@
                     class="quick-order__submit"
                     :disabled="!isFormValid">
               Заказать уборку
-              <i :class="ICONS.BROOM"></i>
+              <font-awesome-icon :icon="faBroom" />
             </button>
           </form>
         </div>
@@ -102,10 +102,18 @@
 import { ref, computed } from 'vue'
 import PrivacyPolicy from './PrivacyPolicy.vue'
 import TermsOfService from './TermsOfService.vue'
-import { ICONS } from '@/constants/icons'
+import { 
+  faPhone,
+  faEnvelope,
+  faBroom
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  faVk,
+  faTelegram,
+  faWhatsapp
+} from '@fortawesome/free-brands-svg-icons'
 
 const baseUrl = import.meta.env.BASE_URL
-
 const logoSrc = import.meta.env.BASE_URL + 'images/logo/logo.svg'
 
 const form = ref({
@@ -355,9 +363,10 @@ defineExpose({ setOrderFromCalc })
     margin-bottom: 1rem;
     transition: color 0.3s;
 
-    i {
+    :deep(svg) {
       margin-right: 1rem;
       color: var(--primary-color);
+      font-size: 1.1rem;
     }
 
     &:hover {
@@ -382,9 +391,18 @@ defineExpose({ setOrderFromCalc })
     text-decoration: none;
     transition: all 0.3s;
 
+    :deep(svg) {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
     &:hover {
       background: var(--primary-color);
       filter: brightness(0.9);
+
+      :deep(svg) {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -525,11 +543,11 @@ defineExpose({ setOrderFromCalc })
       transform: translateY(-2px);
     }
 
-    i {
+    :deep(svg) {
       transition: transform 0.3s;
     }
 
-    &:not(:disabled):hover i {
+    &:not(:disabled):hover :deep(svg) {
       transform: rotate(15deg);
     }
   }

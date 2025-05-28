@@ -13,26 +13,26 @@
         </p>
         <div class="hero__features">
           <div class="hero__feature">
-            <i :class="ICONS.CHECK_CIRCLE"></i>
+            <font-awesome-icon :icon="faCheckCircle" />
             <span>Гарантия качества</span>
           </div>
           <div class="hero__feature">
-            <i :class="ICONS.CLOCK"></i>
+            <font-awesome-icon :icon="faClock" />
             <span>Пунктуальность</span>
           </div>
           <div class="hero__feature">
-            <i :class="ICONS.SHIELD"></i>
+            <font-awesome-icon :icon="faShield" />
             <span>Безопасные средства</span>
           </div>
         </div>
         <div class="hero__actions">
           <button class="hero__order-btn" @click="scrollToOrder">
             Заказать уборку
-            <i :class="ICONS.ARROW_RIGHT"></i>
+            <font-awesome-icon :icon="faArrowRight" />
           </button>
           <a href="#services" class="hero__more-btn">
             Узнать больше
-            <i :class="ICONS.CHEVRON_DOWN"></i>
+            <font-awesome-icon :icon="faChevronDown" />
           </a>
         </div>
       </div>
@@ -44,7 +44,13 @@
 </template>
 
 <script setup>
-import { ICONS } from '@/constants/icons'
+import { 
+  faCheckCircle,
+  faClock,
+  faShield,
+  faArrowRight,
+  faChevronDown
+} from '@fortawesome/free-solid-svg-icons'
 
 const scrollToOrder = () => {
   const orderForm = document.querySelector('.footer__form')
@@ -139,8 +145,14 @@ const scrollToOrder = () => {
     gap: 0.5rem;
     font-weight: 500;
 
-    i {
+    :deep(svg) {
       color: var(--primary-color);
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    &:hover :deep(svg) {
+      transform: scale(1.1);
     }
   }
 
@@ -171,17 +183,12 @@ const scrollToOrder = () => {
     gap: 0.5rem;
     transition: all 0.3s;
 
-    &:hover {
-      background: var(--primary-color);
-      filter: brightness(0.9);
-
-      i {
-        transform: translateX(5px);
-      }
+    :deep(svg) {
+      transition: transform 0.3s;
     }
 
-    i {
-      transition: transform 0.3s;
+    &:hover :deep(svg) {
+      transform: translateX(5px);
     }
   }
 
@@ -199,18 +206,12 @@ const scrollToOrder = () => {
     gap: 0.5rem;
     transition: all 0.3s;
 
-    &:hover {
-      background: white;
-      color: var(--primary-color);
-      transform: translateY(-2px);
-
-      i {
-        transform: translateY(3px);
-      }
+    :deep(svg) {
+      transition: transform 0.3s;
     }
 
-    i {
-      transition: transform 0.3s;
+    &:hover :deep(svg) {
+      transform: translateY(3px);
     }
   }
 

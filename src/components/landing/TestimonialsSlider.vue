@@ -20,7 +20,6 @@
                     <i v-for="star in 5" :key="star" 
                        class="fas fa-star"
                        :class="{ 'active': star <= testimonial.rating, 'inactive': star > testimonial.rating }"></i>
-                    <span class="testimonials__rating-label">{{ testimonial.rating }} из 5</span>
                   </div>
                   <span class="testimonials__service">{{ testimonial.service }}</span>
                 </div>
@@ -49,6 +48,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const testimonials = [
   {
@@ -331,6 +331,62 @@ onUnmounted(() => {
     font-size: 0.95rem;
     color: #888;
     font-weight: 500;
+  }
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(47,128,237,0.04);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eaeaea;
+
+  &__rating {
+    color: #ffd700;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.2rem;
+  }
+
+  &__text {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    h4 {
+      font-size: 1rem;
+      color: #222;
+      margin-bottom: 0.2rem;
+    }
+    p {
+      font-size: 0.85rem;
+      color: #888;
+    }
   }
 }
 </style> 

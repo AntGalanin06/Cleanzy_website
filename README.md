@@ -1,74 +1,76 @@
-# Cleanzy - Сайт клининговой компании
+# Cleanzy — Сервис профессиональной уборки
 
-Современный лендинг для клининговой компании, разработанный на Vue 3 и Vite.
+![Главная страница](public/images/screens/main.png)
 
-## Технологии
+## О проекте
 
-- Vue 3
-- Vite
-- SCSS
-- Express.js (для обработки заявок)
+Cleanzy — это современный лендинг для сервиса профессиональной уборки квартир, домов и офисов. Сайт адаптивен, быстро работает, поддерживает калькулятор стоимости, отзывы, галерею, FAQ и онлайн-заказ.
 
-## Установка и запуск
+- **Технологии:** Vue 3, Vite, SCSS, FontAwesome (CDN), адаптивная верстка
+- **Деплой:** GitHub Pages
+- **Демо:** [Посмотреть сайт на Pages](https://anton-github-username.github.io/Cleanzy_website/)
 
-### Локальная разработка
+## Скриншоты
 
-1. Клонируйте репозиторий:
-```bash
-git clone https://github.com/yourusername/cleanzy_project.git
-cd cleanzy_project
-```
+- ![Главная](public/images/screens/main.png)
+- ![Калькулятор](public/images/screens/calc.png)
+- ![Отзывы](public/images/screens/reviews.png)
+- ![Галерея](public/images/screens/gallery.png)
+- ![Мобильная версия](public/images/screens/mobile.png)
 
-2. Установите зависимости:
-```bash
-npm install
-```
-
-3. Запустите сервер разработки:
-```bash
-npm run dev
-```
-
-4. Запустите сервер для обработки заявок:
-```bash
-node server.js
-```
-
-### Сборка для продакшена
-
-```bash
-npm run build
-```
+> Скриншоты лежат в папке `public/images/screens/`. Добавьте свои, если нужно.
 
 ## Структура проекта
 
-- `src/components/landing/` - компоненты лендинга
-- `src/pages/` - страницы приложения
-- `server.js` - сервер для обработки заявок
-- `orders.json` - файл для хранения заявок
-
-## Деплой на GitHub Pages
-
-Проект автоматически деплоится на GitHub Pages при пуше в ветку `main`.
-
-## Лицензия
-
-MIT
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-```sh
-npm install
+```
+Cleanzy_website/
+├── public/
+│   └── images/
+│       └── screens/         # Скриншоты для README
+├── src/
+│   ├── assets/              # Стили, иконки, базовые ассеты
+│   ├── components/          # Vue-компоненты (landing, common, icons)
+│   ├── pages/               # Страницы (SPA)
+│   ├── plugins/             # Плагины (FontAwesome)
+│   ├── router/              # Роутинг
+│   └── main.js              # Точка входа
+├── index.html               # Главный HTML
+├── package.json             # Зависимости
+├── vite.config.js           # Конфиг Vite
+├── README.md                # Документация
 ```
 
-### Compile and Hot-Reload for Development
+## Быстрый старт
 
-```sh
-npm run dev
-```
+1. **Установите зависимости:**
+   ```bash
+   npm install
+   ```
+2. **Запустите проект в режиме разработки:**
+   ```bash
+   npm run dev
+   ```
+3. **Соберите для продакшена:**
+   ```bash
+   npm run build
+   ```
+4. **Деплой на GitHub Pages:**
+   - Используйте ветку `gh-pages` или автоматический workflow.
+
+## Особенности
+
+- Адаптивная шапка с анимированным бургер-меню
+- Калькулятор стоимости с анимацией кнопки
+- Отзывы с красивыми звёздами
+- Галерея до/после
+- Современные иконки FontAwesome через CDN
+- Чистая структура и кроссбраузерные стили
+
+## Контакты
+
+- Автор: [Ваше имя](https://github.com/anton-github-username)
+- Вопросы и предложения: issues или pull request
+
+---
+
+**Скриншоты для README кладите в папку `public/images/screens/` и обновляйте ссылки по мере необходимости.**

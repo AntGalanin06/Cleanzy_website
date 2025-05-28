@@ -61,7 +61,7 @@
 
       <button type="submit" class="btn btn--primary btn--block calc-order-btn">
         Заказать уборку
-        <i class="fas fa-arrow-down"></i>
+        <font-awesome-icon :icon="faArrowDown" />
       </button>
     </form>
   </div>
@@ -70,6 +70,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { defineEmits } from 'vue'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 const emits = defineEmits(['order'])
 
@@ -214,6 +215,20 @@ const handleOrder = () => {
     border-color: var(--primary-color);
     background: #fff;
   }
+  color: #222;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fafbfc;
+  background-image: none;
+  box-shadow: none;
+  min-width: 0;
+  min-height: 40px;
+  line-height: 1.2;
+  option {
+    color: #222;
+    background: #fff;
+  }
 }
 
 .form-range {
@@ -311,25 +326,29 @@ const handleOrder = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  padding: 1rem 0;
-  border-radius: 8px;
+  gap: 0.5rem;
+  padding: 1rem;
   background: var(--primary-color);
-  color: #fff;
-  box-shadow: none;
+  color: white;
   border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: background 0.2s, transform 0.2s;
+  transition: all 0.3s;
+
+  :deep(svg) {
+    transition: transform 0.3s;
+  }
+
   &:hover {
     background: var(--primary-color);
     filter: brightness(0.9);
-    transform: translateY(-1px) scale(1.02);
-  }
-  i {
-    font-size: 1.1rem;
+    transform: translateY(-2px);
+
+    :deep(svg) {
+      transform: translateY(8px);
+    }
   }
 }
 
