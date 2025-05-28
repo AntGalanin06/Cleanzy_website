@@ -43,43 +43,43 @@ import { ref } from 'vue'
 
 const items = [
   {
-    before: '/images/gallery/before1.jpg',
-    after: '/images/gallery/after1.jpg',
+    before: `${import.meta.env.BASE_URL}images/gallery/before1.jpg`,
+    after: `${import.meta.env.BASE_URL}images/gallery/after1.jpg`,
     caption: 'Генеральная уборка квартиры'
   },
   {
-    before: '/images/gallery/before2.jpg',
-    after: '/images/gallery/after2.jpg',
+    before: `${import.meta.env.BASE_URL}images/gallery/before2.jpg`,
+    after: `${import.meta.env.BASE_URL}images/gallery/after2.jpg`,
     caption: 'Уборка после ремонта'
   },
   {
-    before: '/images/gallery/before3.jpg',
-    after: '/images/gallery/after3.jpg',
+    before: `${import.meta.env.BASE_URL}images/gallery/before3.jpg`,
+    after: `${import.meta.env.BASE_URL}images/gallery/after3.jpg`,
     caption: 'Мойка окон'
   },
   {
-    before: '/images/gallery/before4.jpg',
-    after: '/images/gallery/after4.jpg',
+    before: `${import.meta.env.BASE_URL}images/gallery/before4.jpg`,
+    after: `${import.meta.env.BASE_URL}images/gallery/after4.jpg`,
     caption: 'Уборка ванной комнаты'
   },
   {
-    before: '/images/gallery/before5.jpg',
-    after: '/images/gallery/after5.jpg',
+    before: `${import.meta.env.BASE_URL}images/gallery/before5.jpg`,
+    after: `${import.meta.env.BASE_URL}images/gallery/after5.jpg`,
     caption: 'Уборка кухни'
   },
   {
-    before: '/images/gallery/before6.jpg',
-    after: '/images/gallery/after6.jpg',
+    before: `${import.meta.env.BASE_URL}images/gallery/before6.jpg`,
+    after: `${import.meta.env.BASE_URL}images/gallery/after6.jpg`,
     caption: 'Уборка после переезда'
   },
   {
-    before: '/images/gallery/before7.jpg',
-    after: '/images/gallery/after7.jpg',
+    before: `${import.meta.env.BASE_URL}images/gallery/before7.jpg`,
+    after: `${import.meta.env.BASE_URL}images/gallery/after7.jpg`,
     caption: 'Уборка офиса'
   },
   {
-    before: '/images/gallery/before8.jpg',
-    after: '/images/gallery/after8.jpg',
+    before: `${import.meta.env.BASE_URL}images/gallery/before8.jpg`,
+    after: `${import.meta.env.BASE_URL}images/gallery/after8.jpg`,
     caption: 'Уборка коттеджа'
   }
 ]

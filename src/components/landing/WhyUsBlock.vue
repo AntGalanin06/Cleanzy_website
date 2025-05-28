@@ -69,42 +69,42 @@ const team = [
     name: 'Анна Петрова',
     position: 'Старший клинер',
     experience: 'Опыт работы: 5 лет',
-    photo: '/images/team/cleaner1.png'
+    photo: `${import.meta.env.BASE_URL}images/team/cleaner1.png`
   },
   {
     id: 2,
     name: 'Мария Иванова',
     position: 'Клинер',
     experience: 'Опыт работы: 3 года',
-    photo: '/images/team/cleaner2.png'
+    photo: `${import.meta.env.BASE_URL}images/team/cleaner2.png`
   },
   {
     id: 3,
     name: 'Елена Смирнова',
     position: 'Клинер',
     experience: 'Опыт работы: 4 года',
-    photo: '/images/team/cleaner3.png'
+    photo: `${import.meta.env.BASE_URL}images/team/cleaner3.png`
   },
   {
     id: 4,
     name: 'Олег Кузнецов',
     position: 'Клинер',
     experience: 'Опыт работы: 2 года',
-    photo: '/images/team/cleaner4.png'
+    photo: `${import.meta.env.BASE_URL}images/team/cleaner4.png`
   },
   {
     id: 5,
     name: 'Виктория Лебедева',
     position: 'Клинер',
     experience: 'Опыт работы: 3 года',
-    photo: '/images/team/cleaner5.png'
+    photo: `${import.meta.env.BASE_URL}images/team/cleaner5.png`
   },
   {
     id: 6,
     name: 'Игорь Соловьёв',
     position: 'Клинер',
     experience: 'Опыт работы: 2 года',
-    photo: '/images/team/cleaner6.png'
+    photo: `${import.meta.env.BASE_URL}images/team/cleaner6.png`
   }
 ]
 
