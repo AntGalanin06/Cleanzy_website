@@ -3,7 +3,7 @@
     <div v-if="isMenuOpen" class="header__overlay" @click="closeMenu"></div>
     <div class="container">
       <div class="header__content">
-        <a class="header__logo" href="/">
+        <a class="header__logo" :href="baseUrl">
           <img :src="logoSrc" alt="Cleanzy" class="header__logo-img">
           <span class="header__logo-text">Cleanzy</span>
         </a>
@@ -42,6 +42,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+const baseUrl = import.meta.env.BASE_URL
 const logoSrc = import.meta.env.BASE_URL + 'images/logo/logo.svg'
 const isScrolled = ref(false)
 const isMenuOpen = ref(false)
