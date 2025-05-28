@@ -5,7 +5,7 @@
         <div class="footer__info">
           <div class="footer__logo">
             <a class="footer__logo" href="/">
-              <img src="/images/logo/logo.svg" alt="Cleanzy" class="footer__logo-img">
+              <img :src="`${import.meta.env.BASE_URL}images/logo/logo.svg`" alt="Cleanzy" class="footer__logo-img">
               <h2 class="footer__logo-text">Cleanzy</h2>
             </a>
           </div>

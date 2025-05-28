@@ -53,84 +53,84 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const testimonials = [
   {
     name: 'Анна Петрова',
-    avatar: '/images/testimonials/avatar1.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar1.jpg`,
     rating: 5,
     text: 'Отличный сервис! Клинеры приехали вовремя, сделали всё качественно и быстро. Особенно порадовала уборка ванной комнаты - теперь блестит как новая!',
     service: 'Генеральная уборка'
   },
   {
     name: 'Иван Смирнов',
-    avatar: '/images/testimonials/avatar2.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar2.jpg`,
     rating: 4,
     text: 'В целом доволен, но клинер немного опоздал. Качество уборки отличное, но хотелось бы больше внимания к деталям.',
     service: 'Уборка после ремонта'
   },
   {
     name: 'Елена Козлова',
-    avatar: '/images/testimonials/avatar3.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar3.jpg`,
     rating: 5,
     text: 'Регулярно заказываю уборку раз в неделю. Всегда пунктуально, качественно и с улыбкой. Рекомендую всем, кто ценит свое время!',
     service: 'Регулярная уборка'
   },
   {
     name: 'Дмитрий Иванов',
-    avatar: '/images/testimonials/avatar4.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar4.jpg`,
     rating: 3,
     text: 'Ожидал большего. В целом неплохо, но остались небольшие недочёты. Возможно, попробую ещё раз.',
     service: 'Мойка окон'
   },
   {
     name: 'Мария Сидорова',
-    avatar: '/images/testimonials/avatar5.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar5.jpg`,
     rating: 5,
     text: 'Очень довольна сервисом! Клинеры профессионально подошли к делу, использовали качественные средства. Квартира сияет чистотой!',
     service: 'Генеральная уборка'
   },
   {
     name: 'Алексей Новиков',
-    avatar: '/images/testimonials/avatar6.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar6.jpg`,
     rating: 4,
     text: 'Заказывал уборку офиса. Всё сделано быстро и качественно. Сотрудники остались довольны результатом. Будем обращаться еще!',
     service: 'Уборка офиса'
   },
   {
     name: 'Ольга Морозова',
-    avatar: '/images/testimonials/avatar7.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar7.jpg`,
     rating: 5,
     text: 'Отличный сервис! Особенно понравилось отношение к работе - всё тщательно вымыто, протерто, пропылесосено. Рекомендую!',
     service: 'Регулярная уборка'
   },
   {
     name: 'Сергей Волков',
-    avatar: '/images/testimonials/avatar8.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar8.jpg`,
     rating: 3,
     text: 'Уборка в целом хорошая, но не понравилось, что не убрали под диваном. В остальном всё ок.',
     service: 'Уборка после переезда'
   },
   {
     name: 'Татьяна Соколова',
-    avatar: '/images/testimonials/avatar9.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar9.jpg`,
     rating: 5,
     text: 'Потрясающий сервис! Клинеры приехали вовремя, работали быстро и качественно. Квартира выглядит как новая!',
     service: 'Генеральная уборка'
   },
   {
     name: 'Андрей Лебедев',
-    avatar: '/images/testimonials/avatar10.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar10.jpg`,
     rating: 4,
     text: 'Заказывал уборку коттеджа. Огромная площадь, но клинеры справились на отлично! Всё чисто, свежо, приятно пахнет.',
     service: 'Уборка коттеджа'
   },
   {
     name: 'Юлия Воробьева',
-    avatar: '/images/testimonials/avatar11.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar11.jpg`,
     rating: 5,
     text: 'Регулярно пользуюсь услугами. Всегда на высоте! Особенно нравится отношение к работе и внимание к деталям.',
     service: 'Регулярная уборка'
   },
   {
     name: 'Павел Григорьев',
-    avatar: '/images/testimonials/avatar12.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/testimonials/avatar12.jpg`,
     rating: 4,
     text: 'Заказывал уборку после вечеринки. Клинеры приехали рано утром, быстро и качественно привели дом в порядок. Спасибо!',
     service: 'Уборка после вечеринки'

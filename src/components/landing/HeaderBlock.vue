@@ -4,7 +4,7 @@
     <div class="container">
       <div class="header__content">
         <a class="header__logo" href="/">
-          <img src="/images/logo/logo.svg" alt="Cleanzy" class="header__logo-img">
+          <img :src="`${import.meta.env.BASE_URL}images/logo/logo.svg`" alt="Cleanzy" class="header__logo-img">
           <span class="header__logo-text">Cleanzy</span>
         </a>
 
