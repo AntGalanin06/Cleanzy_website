@@ -34,6 +34,11 @@ coverage
 # Orders file
 orders.json
 
+# Server files (exclude from GitHub)
+server.js
+database.db
+*.db
+
 /cypress/videos/
 /cypress/screenshots/
 

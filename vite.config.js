@@ -14,5 +14,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/Cleanzy_website/' // <-- ВАЖНО! Имя репозитория с двумя слэшами
+  base: '/Cleanzy_website/', // <-- ВАЖНО! Имя репозитория с двумя слэшами
 })

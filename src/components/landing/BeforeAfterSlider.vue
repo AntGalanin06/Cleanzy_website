@@ -83,9 +83,9 @@ const items = [
     caption: 'Уборка коттеджа'
   },
   {
-  before: `${import.meta.env.BASE_URL}images/gallery/after9.png`,
-  after: `${import.meta.env.BASE_URL}images/gallery/before9.png`,
-  caption: 'Уборка балкона'
+    before: `${import.meta.env.BASE_URL}images/gallery/after9.png`,
+    after: `${import.meta.env.BASE_URL}images/gallery/before9.png`,
+    caption: 'Уборка балкона'
   }
 ]
 
