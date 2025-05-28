@@ -13,26 +13,26 @@
         </p>
         <div class="hero__features">
           <div class="hero__feature">
-            <i class="fas fa-check-circle"></i>
+            <i :class="ICONS.CHECK_CIRCLE"></i>
             <span>Гарантия качества</span>
           </div>
           <div class="hero__feature">
-            <i class="fas fa-clock"></i>
+            <i :class="ICONS.CLOCK"></i>
             <span>Пунктуальность</span>
           </div>
           <div class="hero__feature">
-            <i class="fas fa-shield"></i>
+            <i :class="ICONS.SHIELD"></i>
             <span>Безопасные средства</span>
           </div>
         </div>
         <div class="hero__actions">
           <button class="hero__order-btn" @click="scrollToOrder">
             Заказать уборку
-            <i class="fas fa-arrow-right"></i>
+            <i :class="ICONS.ARROW_RIGHT"></i>
           </button>
           <a href="#services" class="hero__more-btn">
             Узнать больше
-            <i class="fas fa-chevron-down"></i>
+            <i :class="ICONS.CHEVRON_DOWN"></i>
           </a>
         </div>
       </div>
@@ -44,6 +44,8 @@
 </template>
 
 <script setup>
+import { ICONS } from '@/constants/icons'
+
 const scrollToOrder = () => {
   const orderForm = document.querySelector('.footer__form')
   if (orderForm) {

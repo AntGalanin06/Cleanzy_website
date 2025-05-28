@@ -30,37 +30,38 @@
 
 <script setup>
 import { ref } from 'vue'
+import { ICONS } from '@/constants/icons'
 
 const benefits = ref([
   {
-    icon: 'fas fa-broom',
-    title: 'Профессиональное оборудование',
-    description: 'Используем современную технику и эффективные средства для идеальной чистоты'
+    icon: ICONS.BROOM,
+    title: 'Профессиональная уборка',
+    description: 'Используем современное оборудование и экологичные средства'
   },
   {
-    icon: 'fas fa-users',
+    icon: ICONS.USERS,
     title: 'Опытные клинеры',
-    description: 'Наши специалисты проходят тщательный отбор и регулярное обучение'
+    description: 'Наши специалисты проходят тщательный отбор и обучение'
   },
   {
-    icon: 'fas fa-clock',
-    title: 'Экономия времени',
-    description: 'Выполняем уборку быстро и качественно, экономя ваше время'
+    icon: ICONS.CLOCK,
+    title: 'Быстро и качественно',
+    description: 'Выполняем работу в оговоренные сроки без потери качества'
   },
   {
-    icon: 'fas fa-leaf',
+    icon: ICONS.LEAF,
     title: 'Экологичные средства',
-    description: 'Используем безопасные и гипоаллергенные чистящие средства'
+    description: 'Используем безопасную бытовую химию'
   },
   {
-    icon: 'fas fa-shield',
+    icon: ICONS.SHIELD,
     title: 'Гарантия качества',
-    description: 'Если результат вас не устроит, мы переделаем работу бесплатно'
+    description: 'Даем гарантию на все виды уборки'
   },
   {
-    icon: 'fas fa-hand-holding-dollar',
+    icon: ICONS.MONEY,
     title: 'Доступные цены',
-    description: 'Честные цены без скрытых платежей. Оплата после уборки'
+    description: 'Предлагаем оптимальное соотношение цены и качества'
   }
 ])
 
