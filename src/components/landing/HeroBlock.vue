@@ -57,7 +57,7 @@ const scrollToOrder = () => {
   position: relative;
   height: 100vh;
   min-height: 600px;
-  background: url('/images/hero/hero-bg.png') center/cover no-repeat;
+  background: url('/images/hero/hero-bg.png') right center/cover no-repeat;
   display: flex;
   align-items: center;
   color: white;
@@ -237,6 +237,50 @@ const scrollToOrder = () => {
       height: 100%;
       background: var(--primary-color);
       animation: scrollLine 2s ease-in-out infinite;
+    }
+  }
+
+  @media (max-width: 900px) {
+    background-position: 80% center;
+    min-height: 480px;
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+
+  @media (max-width: 600px) {
+    background-position: 85% center;
+    background-size: cover;
+    min-height: 520px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 72px;
+    padding-bottom: 14vw;
+    .container {
+      padding: 0 6px;
+    }
+    &__content {
+      max-width: 100%;
+      padding-bottom: 0;
+      margin-top: 32px;
+    }
+    &__actions {
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      align-items: stretch;
+      margin-bottom: 0;
+    }
+    &__order-btn, &__more-btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 1rem;
+      padding: 0.9rem 0.5rem;
+      box-sizing: border-box;
+    }
+    &__scroll-indicator {
+      bottom: 1rem;
     }
   }
 }

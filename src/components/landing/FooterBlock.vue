@@ -214,6 +214,22 @@ const isFormValid = computed(() => {
 
 const submitForm = async () => {
   if (isFormValid.value) {
+    // Проверяем, работаем ли мы на GitHub Pages (статический режим)
+    const isStatic = window.location.hostname.includes('github.io');
+    if (isStatic) {
+      alert('Спасибо! Ваша заявка отправлена (демо-режим, без отправки на сервер)');
+      form.value = {
+        name: '',
+        phone: '',
+        service: '',
+        comment: ''
+      }
+      errors.value = {
+        name: '',
+        phone: ''
+      }
+      return;
+    }
     try {
       const response = await fetch('http://localhost:3001/api/orders', {
         method: 'POST',
