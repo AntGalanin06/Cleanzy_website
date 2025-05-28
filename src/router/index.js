@@ -6,9 +6,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-  // TODO: Добавить остальные маршруты:
-  // /services, /booking, /about, /blog, /cabinet, /admin
+  }
 ]
 
 const router = createRouter({

@@ -200,7 +200,15 @@ onMounted(() => {
 
   &__content {
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+    opacity: 0;
+    max-height: 0;
+    will-change: max-height, opacity;
+  }
+
+  .active &__content {
+    opacity: 1;
+    max-height: 500px;
   }
 
   &__text {

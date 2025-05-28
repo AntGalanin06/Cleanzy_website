@@ -15,11 +15,11 @@
                @mouseleave="stopDrag"
                @touchend="stopDrag">
             <div class="before-after__image before-after__image--before">
-              <img :src="item.before" :alt="'До уборки ' + (index + 1)">
+              <img :src="item.before" :alt="'До уборки ' + (index + 1)" loading="lazy">
             </div>
             <div class="before-after__image before-after__image--after" 
                  :style="{ clipPath: `inset(0 ${100 - positions[index]}% 0 0)` }">
-              <img :src="item.after" :alt="'После уборки ' + (index + 1)">
+              <img :src="item.after" :alt="'После уборки ' + (index + 1)" loading="lazy">
             </div>
             <div class="before-after__divider" :style="{ left: positions[index] + '%' }">
               <button class="before-after__handle" type="button">

@@ -23,13 +23,13 @@
             </a>
           </div>
           <div class="footer__social">
-            <a href="https://vk.com/cleanzy_ru" class="footer__social-link" target="_blank" rel="noopener">
+            <a href="https://vk.com/cleanzy_ru" class="footer__social-link" target="_blank" rel="noopener" aria-label="ВКонтакте">
               <font-awesome-icon :icon="faVk" />
             </a>
-            <a href="https://t.me/+79990858555" class="footer__social-link" target="_blank" rel="noopener">
+            <a href="https://t.me/+79990858555" class="footer__social-link" target="_blank" rel="noopener" aria-label="Telegram">
               <font-awesome-icon :icon="faTelegram" />
             </a>
-            <a href="https://wa.me/79990858555" class="footer__social-link" target="_blank" rel="noopener">
+            <a href="https://wa.me/79990858555" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
               <font-awesome-icon :icon="faWhatsapp" />
             </a>
           </div>
@@ -401,7 +401,7 @@ defineExpose({ setOrderFromCalc })
       filter: brightness(0.9);
 
       :deep(svg) {
-        transform: scale(1.1);
+        transform: scale(1.1) rotate(10deg);
       }
     }
   }
@@ -550,6 +550,29 @@ defineExpose({ setOrderFromCalc })
     &:not(:disabled):hover :deep(svg) {
       transform: rotate(15deg);
     }
+  }
+
+  &__field select {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1.2px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    transition: var(--transition);
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &__field select:focus {
+    border-color: var(--primary-color);
+    background: rgba(255,255,255,0.15);
+  }
+
+  &__field option {
+    background: #232323;
+    color: #fff;
   }
 }
 </style> 
