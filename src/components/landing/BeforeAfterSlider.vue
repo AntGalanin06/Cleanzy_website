@@ -24,7 +24,7 @@
             <div class="before-after__divider" :style="{ left: positions[index] + '%' }">
               <button class="before-after__handle" type="button">
                 <span class="before-after__handle-icon">
-                  <i class="fas fa-arrows-left-right"></i>
+                  <font-awesome-icon :icon="faArrowsLeftRight" />
                 </span>
               </button>
             </div>
@@ -39,7 +39,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { faArrowsLeftRight } from '@fortawesome/free-solid-svg-icons'
 
 const items = [
   {

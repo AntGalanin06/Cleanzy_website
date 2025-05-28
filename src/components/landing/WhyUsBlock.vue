@@ -7,7 +7,7 @@
         <div class="why-us__info">
           <div class="info-card" v-for="(item, index) in infoItems" :key="index">
             <div class="info-card__icon">
-              <i :class="item.icon"></i>
+              <font-awesome-icon :icon="item.icon" />
             </div>
             <h3 class="info-card__title">{{ item.title }}</h3>
             <p class="info-card__text">{{ item.text }}</p>
@@ -40,24 +40,26 @@
 </template>
 
 <script setup>
+import { faMedal, faClock, faShield, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons'
+
 const infoItems = [
   {
-    icon: 'fas fa-medal',
+    icon: faMedal,
     title: 'Профессионализм',
     text: 'Наши клинеры проходят строгий отбор и регулярное обучение'
   },
   {
-    icon: 'fas fa-clock',
+    icon: faClock,
     title: 'Пунктуальность',
     text: 'Приезжаем точно в назначенное время и соблюдаем сроки'
   },
   {
-    icon: 'fas fa-shield',
+    icon: faShield,
     title: 'Гарантия качества',
     text: 'Используем только проверенные средства и методы уборки'
   },
   {
-    icon: 'fas fa-hand-holding-heart',
+    icon: faHandHoldingHeart,
     title: 'Индивидуальный подход',
     text: 'Учитываем все пожелания и особенности вашего дома'
   }
