@@ -1,19 +1,19 @@
 <template>
   <div class="home">
     <HeaderBlock />
-    <HeroBlock />
-    <BenefitsBlock />
-    <section id="calculator" class="calculator-section">
+    <HeroBlock class="reveal" />
+    <BenefitsBlock class="reveal" />
+    <section id="calculator" class="calculator-section reveal">
       <div class="container">
         <h2 class="calculator-section__title">Рассчитайте стоимость уборки</h2>
         <PriceCalc @order="handleOrderFromCalc" />
       </div>
     </section>
-    <WhyUsBlock id="team" />
-    <BeforeAfterSlider />
-    <TestimonialsSlider />
-    <FaqAccordion id="faq" />
-    <FooterBlock ref="footerBlock" />
+    <WhyUsBlock id="team" class="reveal" />
+    <BeforeAfterSlider class="reveal" />
+    <TestimonialsSlider class="reveal" />
+    <FaqAccordion id="faq" class="reveal" />
+    <FooterBlock ref="footerBlock" class="reveal" />
     <!-- Здесь будут добавлены остальные компоненты -->
   </div>
 </template>
@@ -28,7 +28,7 @@ import TestimonialsSlider from '@/components/landing/TestimonialsSlider.vue'
 import FaqAccordion from '@/components/landing/FaqAccordion.vue'
 import FooterBlock from '@/components/landing/FooterBlock.vue'
 import PriceCalc from '@/components/landing/PriceCalc.vue'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 
 const footerBlock = ref(null)
 
@@ -49,6 +49,20 @@ onMounted(() => {
     history.replaceState(null, '', window.location.pathname + window.location.search);
   }
   window.scrollTo({ top: 0, behavior: 'auto' })
+
+  // Scroll reveal
+  nextTick(() => {
+    const reveals = document.querySelectorAll('.reveal')
+    const observer = new window.IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--active')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { threshold: 0.15 })
+    reveals.forEach(el => observer.observe(el))
+  })
 })
 </script>
 

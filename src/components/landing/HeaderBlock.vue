@@ -79,12 +79,7 @@ const scrollToSection = (sectionId) => {
 const scrollToOrder = () => {
   const orderForm = document.querySelector('.footer__form')
   if (orderForm) {
-    const headerHeight = document.querySelector('.header').offsetHeight
-    const formTop = orderForm.offsetTop - headerHeight
-    window.scrollTo({
-      top: formTop,
-      behavior: 'smooth'
-    })
+    orderForm.scrollIntoView({ behavior: 'smooth' })
     isMenuOpen.value = false
   }
 }

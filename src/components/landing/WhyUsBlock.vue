@@ -19,7 +19,7 @@
           <div class="team-grid">
             <div v-for="member in team" :key="member.id" class="team-member">
               <div class="team-member__photo">
-                <img :src="member.photo" :alt="member.name">
+                <img :src="member.photo" :alt="member.name" loading="lazy">
               </div>
               <h4 class="team-member__name">{{ member.name }}</h4>
               <p class="team-member__position">{{ member.position }}</p>
@@ -30,8 +30,8 @@
       </div>
 
       <div class="why-us__stats">
-        <div class="stat-item" v-for="stat in stats" :key="stat.id">
-          <div class="stat-item__number">{{ stat.number }}</div>
+        <div class="stat-item" v-for="(stat, i) in stats" :key="stat.id">
+          <div class="stat-item__number">{{ animatedNumbers[i] }}{{ stat.suffix }}</div>
           <div class="stat-item__label">{{ stat.label }}</div>
         </div>
       </div>
@@ -41,6 +41,7 @@
 
 <script setup>
 import { faMedal, faClock, faShield, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons'
+import { ref, onMounted } from 'vue'
 
 const infoItems = [
   {
@@ -113,25 +114,63 @@ const team = [
 const stats = [
   {
     id: 1,
-    number: '1000+',
-    label: 'Довольных клиентов'
+    number: 1000,
+    label: 'Довольных клиентов',
+    suffix: '+'
   },
   {
     id: 2,
-    number: '5000+',
-    label: 'Выполненных уборок'
+    number: 5000,
+    label: 'Выполненных уборок',
+    suffix: '+'
   },
   {
     id: 3,
-    number: '4.9',
-    label: 'Средний рейтинг'
+    number: 4.9,
+    label: 'Средний рейтинг',
+    suffix: ''
   },
   {
     id: 4,
-    number: '15+',
-    label: 'Профессиональных клинеров'
+    number: 15,
+    label: 'Профессиональных клинеров',
+    suffix: '+'
   }
 ]
+
+const animatedNumbers = ref(stats.map(() => 0))
+
+onMounted(() => {
+  // Анимация чисел при появлении блока
+  const section = document.querySelector('.why-us__stats')
+  if (!section) return
+  const observer = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        stats.forEach((stat, i) => animateNumber(i, stat.number))
+        observer.disconnect()
+      }
+    })
+  }, { threshold: 0.3 })
+  observer.observe(section)
+})
+
+function animateNumber(index, target) {
+  const duration = 1200
+  const start = 0
+  const startTime = performance.now()
+  function update(now) {
+    const elapsed = now - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    let value = start + (target - start) * progress
+    if (target % 1 !== 0) value = value.toFixed(1)
+    else value = Math.floor(value)
+    animatedNumbers.value[index] = value
+    if (progress < 1) requestAnimationFrame(update)
+    else animatedNumbers.value[index] = target
+  }
+  requestAnimationFrame(update)
+}
 </script>
 
 <style lang="scss" scoped>
