@@ -19,7 +19,7 @@
 
         <div class="header__actions">
           <a href="tel:+79990858555" class="header__phone">
-            <i class="fas fa-phone"></i>
+            <i :class="ICONS.PHONE"></i>
             +7 (999) 085-85-55
           </a>
           <button class="header__order-btn" @click="scrollToOrder">
@@ -41,6 +41,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { ICONS } from '@/constants/icons'
 
 const baseUrl = import.meta.env.BASE_URL
 const logoSrc = import.meta.env.BASE_URL + 'images/logo/logo.svg'

@@ -14,23 +14,23 @@
           </p>
           <div class="footer__contacts">
             <a href="tel:+79990858555" class="footer__contact">
-              <i class="fas fa-phone"></i>
+              <i :class="ICONS.PHONE"></i>
               +7 (999) 085-85-55
             </a>
             <a href="mailto:info@cleanzy.ru" class="footer__contact">
-              <i class="fas fa-envelope"></i>
+              <i :class="ICONS.ENVELOPE"></i>
               info@cleanzy.ru
             </a>
           </div>
           <div class="footer__social">
             <a href="https://vk.com/cleanzy_ru" class="footer__social-link" target="_blank" rel="noopener">
-              <i class="fab fa-vk"></i>
+              <i :class="ICONS.VK"></i>
             </a>
             <a href="https://t.me/+79990858555" class="footer__social-link" target="_blank" rel="noopener">
-              <i class="fab fa-telegram"></i>
+              <i :class="ICONS.TELEGRAM"></i>
             </a>
             <a href="https://wa.me/79990858555" class="footer__social-link" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i>
+              <i :class="ICONS.WHATSAPP"></i>
             </a>
           </div>
         </div>
@@ -77,7 +77,7 @@
                     class="quick-order__submit"
                     :disabled="!isFormValid">
               Заказать уборку
-              <i class="fas fa-broom"></i>
+              <i :class="ICONS.BROOM"></i>
             </button>
           </form>
         </div>
@@ -102,6 +102,7 @@
 import { ref, computed } from 'vue'
 import PrivacyPolicy from './PrivacyPolicy.vue'
 import TermsOfService from './TermsOfService.vue'
+import { ICONS } from '@/constants/icons'
 
 const baseUrl = import.meta.env.BASE_URL
 
