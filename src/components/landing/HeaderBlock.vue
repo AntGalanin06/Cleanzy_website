@@ -19,7 +19,7 @@
 
         <div class="header__actions">
           <a href="tel:+79990858555" class="header__phone">
-            <i :class="ICONS.PHONE"></i>
+            <font-awesome-icon :icon="faPhone" />
             +7 (999) 085-85-55
           </a>
           <button class="header__order-btn" @click="scrollToOrder">
@@ -29,9 +29,11 @@
                   :class="{ 'header__menu-btn--active': isMenuOpen }" 
                   @click="toggleMenu"
                   aria-label="Меню">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
           </button>
         </div>
       </div>
@@ -41,7 +43,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { ICONS } from '@/constants/icons'
+import { 
+  faPhone,
+  faBars,
+  faTimes
+} from '@fortawesome/free-solid-svg-icons'
 
 const baseUrl = import.meta.env.BASE_URL
 const logoSrc = import.meta.env.BASE_URL + 'images/logo/logo.svg'
@@ -149,7 +155,7 @@ onUnmounted(() => {
     display: flex;
     gap: 2rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1150px) {
       position: fixed;
       top: 0;
       left: 0;
@@ -217,9 +223,10 @@ onUnmounted(() => {
     font-weight: 500;
     transition: color 0.3s;
 
-    i {
+    :deep(svg) {
       margin-right: 0.5rem;
       color: var(--primary-color);
+      font-size: 1.1rem;
     }
 
     &:hover {
@@ -253,54 +260,65 @@ onUnmounted(() => {
 
   &__menu-btn {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
+    color: white;
+    font-size: 2rem;
     cursor: pointer;
-    padding: 0;
-    z-index: 2001;
-    transition: all 0.3s ease;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+    z-index: 2100;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1150px) {
       display: flex;
     }
 
-    span {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: #fff;
-      border-radius: 1px;
-      margin: 0 0 4px 0;
-      box-shadow: none;
-      transition: all 0.3s ease;
-      transform-origin: left center;
-    }
-
-    span:last-child {
-      margin-bottom: 0;
-    }
-
     &--active {
+      color: var(--primary-color);
+    }
+
+    .burger {
+      display: inline-block;
+      width: 28px;
+      height: 22px;
+      position: relative;
+      transition: all 0.3s;
       span {
-        &:first-child {
-          transform: rotate(45deg);
-        }
-        &:nth-child(2) {
-          opacity: 0;
-          transform: scaleX(0.5);
-        }
-        &:last-child {
-          transform: rotate(-45deg);
-        }
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: currentColor;
+        border-radius: 2px;
+        opacity: 1;
+        left: 0;
+        transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      }
+      span:nth-child(1) {
+        top: 0;
+      }
+      span:nth-child(2) {
+        top: 9px;
+      }
+      span:nth-child(3) {
+        top: 18px;
       }
     }
-
-    &:hover span {
-      background: var(--primary-color);
+    &--active .burger {
+      span:nth-child(1) {
+        top: 9px;
+        transform: rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+        left: 50%;
+      }
+      span:nth-child(3) {
+        top: 9px;
+        transform: rotate(-45deg);
+      }
     }
   }
 

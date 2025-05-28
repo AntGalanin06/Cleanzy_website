@@ -11,7 +11,7 @@
       <div class="benefits__grid">
         <div class="benefit-card" v-for="(benefit, index) in benefits" :key="index">
           <div class="benefit-card__icon">
-            <i :class="benefit.icon"></i>
+            <font-awesome-icon :icon="benefit.icon" />
           </div>
           <h3 class="benefit-card__title">{{ benefit.title }}</h3>
           <p class="benefit-card__description">{{ benefit.description }}</p>
@@ -21,7 +21,7 @@
       <div class="benefits__cta">
         <button class="benefits__order-btn" @click="scrollToOrder">
           Заказать уборку
-          <i class="fas fa-arrow-right"></i>
+          <font-awesome-icon icon="arrow-right" />
         </button>
       </div>
     </div>
@@ -30,36 +30,44 @@
 
 <script setup>
 import { ref } from 'vue'
-import { ICONS } from '@/constants/icons'
+import { 
+  faBroom,
+  faUsers,
+  faClock,
+  faLeaf,
+  faShield,
+  faHandHoldingDollar,
+  faArrowRight
+} from '@fortawesome/free-solid-svg-icons'
 
 const benefits = ref([
   {
-    icon: ICONS.BROOM,
+    icon: faBroom,
     title: 'Профессиональная уборка',
     description: 'Используем современное оборудование и экологичные средства'
   },
   {
-    icon: ICONS.USERS,
+    icon: faUsers,
     title: 'Опытные клинеры',
     description: 'Наши специалисты проходят тщательный отбор и обучение'
   },
   {
-    icon: ICONS.CLOCK,
+    icon: faClock,
     title: 'Быстро и качественно',
     description: 'Выполняем работу в оговоренные сроки без потери качества'
   },
   {
-    icon: ICONS.LEAF,
+    icon: faLeaf,
     title: 'Экологичные средства',
     description: 'Используем безопасную бытовую химию'
   },
   {
-    icon: ICONS.SHIELD,
+    icon: faShield,
     title: 'Гарантия качества',
     description: 'Даем гарантию на все виды уборки'
   },
   {
-    icon: ICONS.MONEY,
+    icon: faHandHoldingDollar,
     title: 'Доступные цены',
     description: 'Предлагаем оптимальное соотношение цены и качества'
   }
@@ -134,12 +142,12 @@ const scrollToOrder = () => {
       filter: brightness(0.9);
       transform: translateY(-2px);
 
-      i {
+      :deep(svg) {
         transform: translateX(5px);
       }
     }
 
-    i {
+    :deep(svg) {
       transition: transform 0.3s;
     }
   }
@@ -176,10 +184,15 @@ const scrollToOrder = () => {
     justify-content: center;
     margin-bottom: 1.5rem;
 
-    i {
+    :deep(svg) {
       font-size: 1.5rem;
       color: white;
+      transition: transform 0.3s;
     }
+  }
+
+  &:hover &__icon :deep(svg) {
+    transform: scale(1.1);
   }
 
   &__title {
