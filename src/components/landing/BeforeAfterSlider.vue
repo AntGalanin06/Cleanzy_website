@@ -24,7 +24,7 @@
             <div class="before-after__divider" :style="{ left: positions[index] + '%' }">
               <button class="before-after__handle" type="button">
                 <span class="before-after__handle-icon">
-                  <i class="fas fa-arrows-alt-h"></i>
+                  <i class="fas fa-arrows-left-right"></i>
                 </span>
               </button>
             </div>
@@ -83,9 +83,9 @@ const items = [
     caption: 'Уборка коттеджа'
   },
   {
-    before: `${import.meta.env.BASE_URL}images/gallery/after9.png`,
-    after: `${import.meta.env.BASE_URL}images/gallery/before9.png`,
-    caption: 'Уборка балкона'
+  before: `${import.meta.env.BASE_URL}images/gallery/after9.png`,
+  after: `${import.meta.env.BASE_URL}images/gallery/before9.png`,
+  caption: 'Уборка балкона'
   }
 ]
 
