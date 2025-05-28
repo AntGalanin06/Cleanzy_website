@@ -4,7 +4,7 @@
     <div class="container">
       <div class="header__content">
         <a class="header__logo" href="/">
-          <img :src="`${import.meta.env.BASE_URL}images/logo/logo.svg`" alt="Cleanzy" class="header__logo-img">
+          <img :src="logoSrc" alt="Cleanzy" class="header__logo-img">
           <span class="header__logo-text">Cleanzy</span>
         </a>
 
@@ -42,6 +42,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+const logoSrc = import.meta.env.BASE_URL + 'images/logo/logo.svg'
 const isScrolled = ref(false)
 const isMenuOpen = ref(false)
 
