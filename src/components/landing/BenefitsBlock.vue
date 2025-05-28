@@ -53,14 +53,14 @@ const benefits = ref([
     description: 'Используем безопасные и гипоаллергенные чистящие средства'
   },
   {
-    icon: 'fas fa-shield-alt',
+    icon: 'fas fa-shield',
     title: 'Гарантия качества',
-    description: 'Даем гарантию на все виды уборки и бесплатно исправляем недочеты'
+    description: 'Если результат вас не устроит, мы переделаем работу бесплатно'
   },
   {
-    icon: 'fas fa-hand-holding-usd',
+    icon: 'fas fa-hand-holding-dollar',
     title: 'Доступные цены',
-    description: 'Предлагаем оптимальное соотношение цены и качества услуг'
+    description: 'Честные цены без скрытых платежей. Оплата после уборки'
   }
 ])
 

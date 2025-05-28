@@ -21,7 +21,7 @@
             <span>Пунктуальность</span>
           </div>
           <div class="hero__feature">
-            <i class="fas fa-shield-alt"></i>
+            <i class="fas fa-shield"></i>
             <span>Безопасные средства</span>
           </div>
         </div>
