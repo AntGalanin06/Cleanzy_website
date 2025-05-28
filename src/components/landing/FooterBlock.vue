@@ -5,7 +5,7 @@
         <div class="footer__info">
           <div class="footer__logo">
             <a class="footer__logo" href="/">
-              <img :src="`${import.meta.env.BASE_URL}images/logo/logo.svg`" alt="Cleanzy" class="footer__logo-img">
+              <img :src="logoSrc" alt="Cleanzy" class="footer__logo-img">
               <h2 class="footer__logo-text">Cleanzy</h2>
             </a>
           </div>
@@ -102,6 +102,8 @@
 import { ref, computed } from 'vue'
 import PrivacyPolicy from './PrivacyPolicy.vue'
 import TermsOfService from './TermsOfService.vue'
+
+const logoSrc = import.meta.env.BASE_URL + 'images/logo/logo.svg'
 
 const form = ref({
   name: '',
