@@ -6,7 +6,7 @@
 
       <div class="testimonials__slider">
         <button class="testimonials__nav-btn testimonials__nav-btn--prev" @click="prevSlide">
-          <i class="fas fa-chevron-left"></i>
+          <font-awesome-icon :icon="faChevronLeft" />
         </button>
 
         <div class="testimonials__slides" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
@@ -17,9 +17,7 @@
                 <div class="testimonials__info">
                   <h3 class="testimonials__name">{{ testimonial.name }}</h3>
                   <div class="testimonials__rating">
-                    <i v-for="star in 5" :key="star" 
-                       class="fas fa-star"
-                       :class="{ 'active': star <= testimonial.rating, 'inactive': star > testimonial.rating }"></i>
+                    <font-awesome-icon v-for="star in 5" :key="star" :icon="faStar" :class="{ 'active': star <= testimonial.rating, 'inactive': star > testimonial.rating }" />
                   </div>
                   <span class="testimonials__service">{{ testimonial.service }}</span>
                 </div>
@@ -30,7 +28,7 @@
         </div>
 
         <button class="testimonials__nav-btn testimonials__nav-btn--next" @click="nextSlide">
-          <i class="fas fa-chevron-right"></i>
+          <font-awesome-icon :icon="faChevronRight" />
         </button>
       </div>
 
@@ -48,7 +46,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const testimonials = [
   {
@@ -241,20 +239,19 @@ onUnmounted(() => {
     gap: 0.25rem;
     margin-bottom: 0.5rem;
 
-    i {
-      color: #ddd;
+    :deep(svg) {
       font-size: 1.2rem;
       transition: all 0.3s ease;
-
-      &.active {
-        color: #ffd700;
-        transform: scale(1.1);
-        text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
-      }
-      &.inactive {
-        color: #e0e0e0;
-        opacity: 0.7;
-      }
+      color: #ddd;
+    }
+    :deep(svg.active) {
+      color: #ffd700;
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 5px rgba(255,215,0,0.5));
+    }
+    :deep(svg.inactive) {
+      color: #e0e0e0;
+      opacity: 0.7;
     }
   }
 
@@ -285,6 +282,10 @@ onUnmounted(() => {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
     z-index: 1;
+
+    :deep(svg) {
+      font-size: 1.2rem;
+    }
 
     &:hover {
       background: var(--primary-color);

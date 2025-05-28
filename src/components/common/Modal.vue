@@ -3,7 +3,7 @@
     <div v-if="modelValue" class="modal-overlay" @click="closeOnOverlay">
       <div class="modal" @click.stop>
         <button class="modal__close" @click="$emit('update:modelValue', false)">
-          <i class="fas fa-times"></i>
+          <font-awesome-icon :icon="faTimes" />
         </button>
         <div class="modal__header">
           <h2 class="modal__title">{{ title }}</h2>
@@ -17,6 +17,8 @@
 </template>
 
 <script setup>
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
 defineProps({
   modelValue: {
     type: Boolean,

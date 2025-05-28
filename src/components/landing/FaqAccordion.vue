@@ -12,7 +12,7 @@
           <button class="accordion__header" @click="toggleAccordion(index)">
             <h3 class="accordion__title">{{ item.question }}</h3>
             <span class="accordion__icon">
-              <i class="fas" :class="activeIndex === index ? 'fa-minus' : 'fa-plus'"></i>
+              <font-awesome-icon :icon="activeIndex === index ? faMinus : faPlus" />
             </span>
           </button>
           <div class="accordion__content" 
@@ -28,7 +28,7 @@
         <p>Не нашли ответ на свой вопрос?</p>
         <button class="faq__button" @click="sendMail">
           Задать вопрос
-          <i class="fas fa-arrow-right"></i>
+          <font-awesome-icon :icon="faArrowRight" />
         </button>
       </div>
     </div>
@@ -37,6 +37,7 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
+import { faPlus, faMinus, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const faqItems = [
   {
@@ -131,26 +132,29 @@ onMounted(() => {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem;
     background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s;
+    box-shadow: none;
+
+    :deep(svg) {
+      transition: transform 0.3s;
+    }
 
     &:hover {
       background: var(--primary-color);
       filter: brightness(0.9);
-    }
+      transform: translateY(-2px);
 
-    i {
-      transition: transform 0.3s;
-    }
-
-    &:hover i {
-      transform: translateX(4px);
+      :deep(svg) {
+        transform: translateX(8px);
+      }
     }
   }
 }
