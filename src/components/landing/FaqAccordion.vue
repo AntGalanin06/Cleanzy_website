@@ -228,6 +228,12 @@ onMounted(() => {
   }
 }
 
+@media (max-width: 1150px) {
+  .faq {
+    padding: 4rem 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .faq {
     padding: 3rem 1rem;
@@ -240,6 +246,20 @@ onMounted(() => {
   .accordion {
     &__title {
       font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .faq {
+    padding: 2.5rem 1rem;
+    
+    &__title {
+      font-size: 1.8rem;
+    }
+    
+    &__subtitle {
+      font-size: 1rem;
     }
   }
 }

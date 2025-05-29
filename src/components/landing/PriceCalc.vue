@@ -77,11 +77,11 @@ const emits = defineEmits(['order'])
 const cleaningTypes = [
   { value: 'regular', label: 'Регулярная уборка', service: 'regular' },
   { value: 'deep', label: 'Генеральная уборка', service: 'general' },
-  { value: 'after', label: 'Уборка после ремонта', service: 'after-repair' },
-  { value: 'windows', label: 'Мойка окон', service: 'windows' }
+  { value: 'after', label: 'Уборка после ремонта', service: 'after-repair' }
 ]
 
 const optionsList = [
+  { key: 'windows', label: 'Мойка окон' },
   { key: 'balcony', label: 'Уборка балкона' },
   { key: 'fridge', label: 'Чистка холодильника' },
   { key: 'oven', label: 'Чистка духовки' },
@@ -117,6 +117,7 @@ const cleaningTypeMultiplier = {
 }
 
 const optionPrices = {
+  windows: 1500,
   balcony: 400,
   fridge: 300,
   oven: 400,
@@ -153,8 +154,7 @@ const handleOrder = () => {
   const serviceMap = {
     regular: 'regular',
     deep: 'general',
-    after: 'after-repair',
-    windows: 'windows'
+    after: 'after-repair'
   }
   const roomMap = {
     apartment: 'Квартира',
@@ -349,6 +349,17 @@ const handleOrder = () => {
     :deep(svg) {
       transform: translateY(8px);
     }
+  }
+}
+
+@media (max-width: 1150px) {
+  .price-calc-card {
+    padding: 2rem;
+  }
+  
+  .calc-form {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 

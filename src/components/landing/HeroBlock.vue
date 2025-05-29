@@ -243,14 +243,14 @@ const scrollToOrder = () => {
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1150px) {
     background-position: 80% center;
     min-height: 480px;
     padding-top: 48px;
     padding-bottom: 32px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     background-position: 85% center;
     background-size: cover;
     min-height: 520px;
@@ -284,6 +284,20 @@ const scrollToOrder = () => {
     }
     &__scroll-indicator {
       bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-height: 480px;
+    padding-top: 60px;
+    padding-bottom: 10vw;
+    
+    &__title {
+      font-size: 2rem;
+    }
+    
+    &__subtitle {
+      font-size: 1rem;
     }
   }
 }

@@ -317,9 +317,29 @@ defineExpose({ setOrderFromCalc })
     gap: 4rem;
     margin-bottom: 3rem;
 
+    @media (max-width: 1150px) {
+      gap: 3rem;
+    }
+
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 2.5rem 1rem 1.5rem;
+      
+      &__logo-text {
+        font-size: 1.5rem;
+      }
+      
+      &__description {
+        font-size: 0.95rem;
+      }
+      
+      &__form {
+        padding: 1.5rem;
+      }
     }
   }
 
@@ -482,31 +502,17 @@ defineExpose({ setOrderFromCalc })
     input, select, textarea {
       width: 100%;
       padding: 0.75rem 1rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: #232323 !important;
+      border: 1.2px solid rgba(255,255,255,0.2);
       border-radius: 8px;
-      color: white;
+      color: #fff;
       font-size: 1rem;
       transition: all 0.3s;
-
-      &.error {
-        border-color: #ff4444;
-      }
-
-      &::placeholder {
-        color: #999;
-      }
-
-      &:focus {
-        outline: none;
-        border-color: var(--primary-color);
-        background: rgba(255, 255, 255, 0.15);
-      }
-
-      &:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-      }
+      box-shadow: none !important;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
     }
 
     .error-message {
@@ -553,26 +559,27 @@ defineExpose({ setOrderFromCalc })
   }
 
   &__field select {
-    background: rgba(255,255,255,0.08);
-    color: #fff;
-    border: 1.2px solid rgba(255,255,255,0.2);
-    border-radius: 12px;
-    font-size: 1rem;
-    padding: 0.75rem 1rem;
-    transition: var(--transition);
-    appearance: none;
-    outline: none;
-    box-shadow: none;
+    background: #232323 !important;
+    color: #fff !important;
+    border-radius: 8px;
+    padding-right: 2.5rem;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="18" viewBox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.516 7.548a.75.75 0 0 1 1.06 0L10 10.97l3.424-3.423a.75.75 0 1 1 1.06 1.06l-3.954 3.954a.75.75 0 0 1-1.06 0L5.516 8.608a.75.75 0 0 1 0-1.06z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.1rem;
+    cursor: pointer;
   }
 
   &__field select:focus {
     border-color: var(--primary-color);
-    background: rgba(255,255,255,0.15);
+    background: #232323 !important;
+    color: #fff !important;
+    box-shadow: none !important;
   }
 
   &__field option {
-    background: #232323;
-    color: #fff;
+    background: #232323 !important;
+    color: #fff !important;
   }
 }
 </style> 

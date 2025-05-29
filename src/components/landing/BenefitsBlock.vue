@@ -219,6 +219,16 @@ const scrollToOrder = () => {
   }
 }
 
+@media (max-width: 1150px) {
+  .benefits {
+    padding: 5rem 0;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .benefits {
     padding: 4rem 0;
@@ -229,6 +239,20 @@ const scrollToOrder = () => {
 
     &__grid {
       grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits {
+    padding: 3rem 0;
+    
+    &__title {
+      font-size: 1.8rem;
+    }
+    
+    &__subtitle {
+      font-size: 1rem;
     }
   }
 }

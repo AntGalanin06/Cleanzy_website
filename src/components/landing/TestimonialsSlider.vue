@@ -390,4 +390,48 @@ onUnmounted(() => {
     }
   }
 }
+
+@media (max-width: 1150px) {
+  .testimonials {
+    &__slider {
+      max-width: 700px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 4rem 0;
+    
+    &__title {
+      font-size: 2rem;
+    }
+    
+    &__slider {
+      max-width: 100%;
+    }
+    
+    &__nav-btn {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 3rem 0;
+    
+    &__title {
+      font-size: 1.8rem;
+    }
+    
+    &__subtitle {
+      font-size: 1rem;
+    }
+    
+    &__card {
+      padding: 1.5rem;
+    }
+  }
+}
 </style> 
