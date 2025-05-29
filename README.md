@@ -1,15 +1,14 @@
 # 🧹 Cleanzy — Профессиональный сервис уборки
 
 <div align="center">
-  <img src="public/images/screens/fullpage-desktop.png" alt="Полная страница" width="100%"/>
-  
-  [![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/)
-  [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  [![HTML5](https://img.shields.io/badge/HTML5-✓-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-  [![CSS3](https://img.shields.io/badge/CSS3-✓-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-  [![Node.js](https://img.shields.io/badge/Node.js-✓-339933?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-  [![Vite](https://img.shields.io/badge/Vite-4.x-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-  [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-✓-222222?style=flat-square&logo=github&logoColor=white)](https://pages.github.com/)
+  <a href="https://antgalanin06.github.io/Cleanzy_website/" target="_blank" style="text-decoration: none;">
+    <div style="background: linear-gradient(45deg, #2ea44f, #22863a); padding: 15px 30px; border-radius: 8px; display: inline-block; margin: 20px 0; box-shadow: 0 4px 15px rgba(46, 164, 79, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+      <span style="color: white; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <span>🌐</span>
+        <span>Посмотреть демо-версию</span>
+      </span>
+    </div>
+  </a>
 </div>
 
 ## 📋 О проекте
@@ -27,6 +26,16 @@ Cleanzy — это современный лендинг для сервиса �
 
 ## 🛠️ Технологии
 
+<div align="center">
+  <img src="https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/HTML5-✓-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-✓-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/Node.js-✓-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Vite-4.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/GitHub%20Pages-✓-222222?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages"/>
+</div>
+
 ### Frontend
 - **Vue.js 3** - современный фреймворк для создания пользовательских интерфейсов
 - **JavaScript (ES6+)** - основной язык программирования
@@ -42,9 +51,9 @@ Cleanzy — это современный лендинг для сервиса �
 - **REST API** - архитектура взаимодействия
 
 ### Адаптивность
-- 📱 Мобильная версия (до 768px)
-- 📱 Планшетная версия (768px - 1024px)
-- 🖥️ Десктопная версия (от 1024px)
+- 📱 Мобильная версия (до 480px)
+- 📱 Планшетная версия (480px - 1150px)
+- 🖥️ Десктопная версия (от 1150px)
 - 🎯 Поддержка всех современных браузеров
 
 ## 🖼️ Скриншоты
@@ -54,9 +63,14 @@ Cleanzy — это современный лендинг для сервиса �
 </div>
 
 ### 📱 Адаптивные версии
-<div align="center">
-  <img src="public/images/screens/fullpage-mobile.png" alt="Мобильная версия" width="48%" style="display: inline-block; margin-right: 2%;"/>
-  <img src="public/images/screens/fullpage-tablet.png" alt="Планшетная версия" width="48%" style="display: inline-block;"/>
+<div style="display: grid; grid-template-columns: 48% 48%; gap: 4%; justify-content: center;">
+  <div>
+    <img src="public/images/screens/fullpage-mobile.png" alt="Мобильная версия" width="100%"/>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 20px;">
+    <img src="public/images/screens/fullpage-tablet.png" alt="Планшетная версия" width="100%"/>
+    <img src="public/images/screens/burger-menu.png" alt="Бургер-меню" width="100%"/>
+  </div>
 </div>
 
 ## 🏗️ Структура проекта
@@ -163,10 +177,6 @@ Cleanzy_website/
 - 📊 Хранение данных в JSON
 - 🚀 Быстрый API
 - 📝 Логирование действий
-
-## 🔗 Демо
-
-Посмотреть работающий сайт можно по ссылке: [Cleanzy на GitHub Pages](https://antgalanin06.github.io/Cleanzy_website/)
 
 ## 📞 Контакты
 

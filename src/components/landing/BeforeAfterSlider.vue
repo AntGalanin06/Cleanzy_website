@@ -181,7 +181,6 @@ const handleDrag = (event, index) => {
     }
     &--after {
       clip-path: inset(0 50% 0 0);
-      transition: clip-path 0.2s;
     }
   }
 
@@ -198,7 +197,7 @@ const handleDrag = (event, index) => {
       left: 50%;
       top: 0;
       transform: translateX(-50%);
-      width: 3px;
+      width: 2px;
       height: 100%;
       background: #e0e0e0;
       border-radius: 2px;
@@ -212,27 +211,25 @@ const handleDrag = (event, index) => {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background: var(--primary-color);
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     box-shadow: 0 2px 8px rgba(47,128,237,0.10);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: grab;
     z-index: 3;
-    transition: box-shadow 0.2s, transform 0.2s;
     pointer-events: auto;
     &:hover, &:active {
       box-shadow: 0 4px 16px rgba(47,128,237,0.13);
-      transform: translate(-50%, -50%) scale(1.07);
     }
   }
   &__handle-icon {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-shadow: none;
     display: flex;
     align-items: center;
@@ -266,6 +263,14 @@ const handleDrag = (event, index) => {
   }
 }
 
+@media (max-width: 1150px) {
+  .before-after {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .before-after {
     &__grid {
@@ -287,6 +292,20 @@ const handleDrag = (event, index) => {
     }
     &__handle-icon {
       font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .before-after {
+    &__slider {
+      height: 220px;
+    }
+    &__title {
+      font-size: 1.8rem;
+    }
+    &__subtitle {
+      font-size: 1rem;
     }
   }
 }
