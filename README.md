@@ -1,15 +1,6 @@
 # 🧹 Cleanzy — Профессиональный сервис уборки
 
-<div align="center">
-  <a href="https://antgalanin06.github.io/Cleanzy_website/" target="_blank" style="text-decoration: none;">
-    <div style="background: linear-gradient(45deg, #2ea44f, #22863a); padding: 15px 30px; border-radius: 8px; display: inline-block; margin: 20px 0; box-shadow: 0 4px 15px rgba(46, 164, 79, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-      <span style="color: white; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 8px;">
-        <span>🌐</span>
-        <span>Посмотреть демо-версию</span>
-      </span>
-    </div>
-  </a>
-</div>
+[![Демо](https://img.shields.io/badge/🌐_Посмотреть_демо--версию-22863a?style=for-the-badge&logo=github)](https://antgalanin06.github.io/Cleanzy_website/)
 
 ## 📋 О проекте
 
@@ -27,12 +18,14 @@ Cleanzy — это современный лендинг для сервиса �
 ## 🛠️ Технологии
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/Vue.js-3.5.13-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js"/>
   <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
   <img src="https://img.shields.io/badge/HTML5-✓-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
   <img src="https://img.shields.io/badge/CSS3-✓-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
   <img src="https://img.shields.io/badge/Node.js-✓-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/Vite-4.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/Express-5.1.0-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+  <img src="https://img.shields.io/badge/FontAwesome-6.5.1-228be6?style=for-the-badge&logo=fontawesome&logoColor=white" alt="FontAwesome"/>
+  <img src="https://img.shields.io/badge/Vite-6.2.4-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
   <img src="https://img.shields.io/badge/GitHub%20Pages-✓-222222?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages"/>
 </div>
 
@@ -178,9 +171,9 @@ Cleanzy_website/
 - 🚀 Быстрый API
 - 📝 Логирование действий
 
-## 📞 Контакты
+### ℹ️ Контакты
 
-Связаться со мной можно через:
+Связаться со мной можно через Telegram или по электронной почте:
 
 [![Telegram](https://img.shields.io/badge/Telegram-@ant_gn-26A5E4?style=flat-square&logo=telegram)](https://t.me/ant_gn)  
 [![Email](https://img.shields.io/badge/Email-info@galanin--nn.ru-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:info@galanin-nn.ru)
