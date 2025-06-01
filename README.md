@@ -132,7 +132,7 @@ Cleanzy_website/
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com/your-username/Cleanzy_website.git
+   git clone https://github.com/AntGalanin06/Cleanzy_website.git
    cd Cleanzy_website
    ```
 
